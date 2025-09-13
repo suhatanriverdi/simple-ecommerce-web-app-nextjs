@@ -1,36 +1,284 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Modern E-commerce Web Application
+
+A full-featured e-commerce web application built with Next.js 15, React, and Tailwind CSS. This project demonstrates modern web development practices, including server and client components, authentication, state management, and responsive design.
+
+## Features
+
+- 🛍️ Product browsing with search and filtering
+- 🔒 User authentication with cookie-based sessions
+- 🛒 Shopping cart with localStorage persistence
+- ❤️ Wishlist functionality for authenticated users
+- 🏷️ Category-based product navigation
+- 📱 Fully responsive design with dark/light mode
+- 🔍 Real-time search and filtering
+- 🛍️ Order management and history
+- ⚡ Server and client components optimization
+
+## Tech Stack
+
+- **Framework:** Next.js 15 (App Router)
+- **Styling:** Tailwind CSS
+- **State Management:** React Context API
+- **Database:** JSON Server
+- **Authentication:** Cookie-based with Middleware
+- **Icons:** React Icons
+- **HTTP Client:** Native Fetch API
+- **Form Handling:** Native React Forms
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
+
+- Node.js 18+
+- npm or yarn
+
+### Installation
+
+1. Clone the repository:
+
+```bash
+git clone https://github.com/yourusername/simple-ecommerce-web-app-nextjs.git
+cd simple-ecommerce-web-app-nextjs
+```
+
+2. Install dependencies:
+
+```bash
+npm install
+# or
+yarn install
+```
+
+3. Start the development server and JSON Server:
 
 ```bash
 npm run dev
 # or
 yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+The application will start on `http://localhost:3000` and the JSON Server will run on `http://localhost:3001`.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+## Project Structure
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```
+├── app/                  # Next.js app directory
+│   ├── api/             # API routes
+│   ├── (routes)/        # Application routes
+│   └── layout.js        # Root layout
+├── components/          # React components
+│   ├── auth/           # Authentication components
+│   ├── cart/           # Shopping cart components
+│   ├── product/        # Product-related components
+│   ├── ui/             # Shared UI components
+│   └── wishlist/       # Wishlist components
+├── context/            # React Context providers
+├── lib/               # Utilities and constants
+├── public/            # Static assets
+└── services/          # API services
+```
 
-## Learn More
+## Features in Detail
 
-To learn more about Next.js, take a look at the following resources:
+### Authentication
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- Cookie-based session management
+- Protected routes with Next.js middleware
+- User profile management
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### Shopping Cart
 
-## Deploy on Vercel
+- Add/remove products
+- Quantity management
+- Price calculations
+- localStorage persistence for guest users
+- Checkout process
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Product Management
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- Product listing with filtering
+- Search functionality
+- Category navigation
+- Detailed product views
+- Image optimization
+
+### Wishlist
+
+- Add/remove products
+- Persistent storage
+- User-specific lists
+- Quick add to cart
+
+### UI/UX
+
+- Responsive design for all devices
+- Dark/Light theme support
+- Loading states and animations
+- Error handling
+- Toast notifications
+- Intuitive navigation
+
+## API Routes
+
+- `/api/auth/*` - Authentication endpoints
+- `/api/products` - Product management
+- `/api/orders` - Order processing
+- `/api/wishlist` - Wishlist management
+
+## Development Decisions
+
+### State Management
+
+Chose React Context API over Redux for simplicity and sufficient functionality for the app's needs.
+
+### Data Fetching
+
+Used a combination of server-side and client-side fetching based on the data requirements and user interaction patterns.
+
+### Styling
+
+Implemented Tailwind CSS for rapid development and consistent design system.
+
+### Authentication
+
+Implemented cookie-based authentication with middleware protection for simplicity and security.
+
+## Contributing
+
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## Acknowledgments
+
+- Design inspired by modern e-commerce trends
+- Product data from [Fake Store API](https://fakestoreapi.com/)
+- Icons from [React Icons](https://react-icons.github.io/react-icons/)
+
+A modern, full-featured e-commerce web application built with **Next.js 15**, **React**, and **Tailwind CSS**. Features include product browsing, cart management, user authentication, wishlist functionality, and order tracking.
+
+## ✨ Features
+
+- 🛍️ **Product Management** - Browse 20+ products with detailed views
+- 🛒 **Shopping Cart** - Add/remove items, persist cart in localStorage
+- ❤️ **Wishlist** - Save favorite products for later
+- 🔐 **Authentication** - Cookie-based login system with route protection
+- 📦 **Order Management** - Complete checkout flow and order history
+- 📱 **Responsive Design** - Mobile-first design with Tailwind CSS
+- ⚡ **Server Components** - Optimized performance with Next.js 15
+- 🔄 **State Management** - Global state with React Context API
+
+## 🚀 Quick Start
+
+### Prerequisites
+
+- Node.js 18+
+- npm
+
+### Installation
+
+1. **Clone the repository**
+
+   ```bash
+   git clone https://github.com/suhatanriverdi/simple-ecommerce-web-app-nexjs.git
+   cd simple-ecommerce-web-app-nexjs
+   ```
+
+2. **Install dependencies**
+
+   ```bash
+   npm install
+   ```
+
+3. **Start the development servers**
+
+   ```bash
+   npm run dev
+   ```
+
+   This will start both Next.js (port 3000) and JSON Server (port 3001).
+
+4. **Open your browser**
+   ```
+   http://localhost:3000
+   ```
+
+## 📁 Project Structure
+
+```
+simple-ecommerce-web-app-nexjs/
+├── app/                    # Next.js 15 App Router
+│   ├── (pages)/           # Route groups
+│   ├── api/               # API routes
+│   └── globals.css        # Global styles
+├── components/            # Reusable UI components
+│   ├── ui/               # Base UI elements
+│   ├── layout/           # Header, Footer, Navbar
+│   ├── product/          # Product-related components
+│   └── cart/             # Cart-related components
+├── context/              # React Context providers
+├── lib/                  # Utilities and API functions
+├── data/                 # JSON Server database
+└── middleware.js         # Route protection
+```
+
+## 🛠️ Tech Stack
+
+- **Framework**: Next.js 15 with App Router
+- **Frontend**: React, Tailwind CSS
+- **State Management**: React Context API
+- **HTTP Client**: Axios
+- **Mock API**: JSON Server
+- **Authentication**: Cookie-based sessions
+- **Deployment**: Vercel
+
+## 🔐 Authentication
+
+**Test Credentials:**
+
+- Email: `test@example.com`
+- Password: `123456`
+
+## 📊 API Endpoints (JSON Server)
+
+- `GET /products` - All products
+- `GET /products/:id` - Single product
+- `GET /users` - User authentication
+- `GET /orders?userId=:id` - User orders
+- `POST /orders` - Create new order
+
+## 🌐 Live Demo
+
+Visit the live application: [Your Vercel URL]
+
+## 📝 Available Scripts
+
+```bash
+npm run dev          # Start development servers
+npm run build        # Build for production
+npm run start        # Start production server
+npm run json-server  # Start only JSON server
+```
+
+## 🎯 Key Implementation Details
+
+- **Route Protection**: Middleware-based authentication for `/profile` and `/wishlist`
+- **Cart Persistence**: localStorage integration for non-authenticated users
+- **Server Components**: Data fetching with loading states and error boundaries
+- **Context Architecture**: Separate contexts for Cart, Auth, and Wishlist management
+
+## 📱 Responsive Design
+
+Fully responsive design optimized for:
+
+- Mobile devices (320px+)
+- Tablets (768px+)
+- Desktop (1024px+)
+
+---

@@ -53,7 +53,7 @@ simple-ecommerce-web-app-nextjs/
 │   └── globals.css        # Global styles
 ├── components/            # Reusable UI components
 │   ├── ui/               # Base UI elements
-│   ├── layout/           # Header, Footer, Navigation
+│   ├── layout/           # Header, Footer, Navbar
 │   ├── product/          # Product-related components
 │   └── cart/             # Cart-related components
 ├── context/              # React Context providers

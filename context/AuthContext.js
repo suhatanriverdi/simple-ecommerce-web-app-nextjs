@@ -1,33 +1,46 @@
-import { createContext } from "react";
+// context/AuthContext.js
+"use client";
 
-export const AuthContext = createContext();
+import { createContext, useContext, useEffect, useState } from "react";
+import authService from "@/services/authService";
+
+const AuthContext = createContext();
 
 export const AuthProvider = ({ children }) => {
+  const [user, setUser] = useState(null);
+  const [loading, setLoading] = useState(true);
+
   useEffect(() => {
-    const checkAuth = async () => {
-      const token = getAuthToken();
-
-      if (token) {
-        try {
-          // Token'daki user ID ile kullanıcı bilgilerini al
-          const userData = await usersAPI.getById(token);
-          setUser(userData);
-        } catch (error) {
-          // Token geçersizse temizle
-          removeAuthToken();
-        }
+    const fetchUser = async () => {
+      try {
+        const currentUser = await authService.getCurrentUser();
+        setUser(currentUser);
+      } catch (err) {
+        setUser(null);
+      } finally {
+        setLoading(false);
       }
-      setLoading(false);
     };
-
-    checkAuth();
+    fetchUser();
   }, []);
 
-  const isAuthenticated = false; // Replace with real authentication logic
+  const login = async (username, password) => {
+    const loggedUser = await authService.login(username, password);
+    setUser(loggedUser);
+  };
+
+  const logout = () => {
+    authService.logout();
+    setUser(null);
+  };
 
   return (
-    <AuthContext.Provider value={{ isAuthenticated }}>
+    <AuthContext.Provider
+      value={{ user, login, logout, loading, isAuthenticated: !!user }}
+    >
       {children}
     </AuthContext.Provider>
   );
 };
+
+export const useAuth = () => useContext(AuthContext);

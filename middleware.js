@@ -1,24 +1,24 @@
 // middleware.js - Next.js middleware
-import { NextResponse } from 'next/server';
+import { NextResponse } from "next/server";
 
 export function middleware(request) {
   const { pathname } = request.nextUrl;
 
-  // Pages that needs to be protected
-  const protectedRoutes = ['/profile', '/wishlist'];
-  const isProtected = protectedRoutes.some(route =>
-    pathname.startsWith(route)
+  // Pages that need to be protected
+  const protectedRoutes = ["/profile", "/wishlist", "/api/orders"];
+  const isProtected = protectedRoutes.some((route) =>
+    pathname.startsWith(route),
   );
 
   if (isProtected) {
-    // Get the token from Cookies
-    const token = request.cookies.get('auth-token');
+    // Get the user ID from Cookies
+    const userId = request.cookies.get("authUserId");
 
-    // Forward to login page if token is not present
-    if (!token) {
-      const loginUrl = new URL('/login', request.url);
-      // Preserve the original path
-      loginUrl.searchParams.set('redirect', pathname);
+    // Forward to login page if user is not authenticated
+    if (!userId) {
+      const loginUrl = new URL("/login", request.url);
+      // Preserve the original path for redirect after login
+      loginUrl.searchParams.set("redirect", pathname);
       return NextResponse.redirect(loginUrl);
     }
   }
@@ -27,5 +27,5 @@ export function middleware(request) {
 }
 
 export const config = {
-  matcher: ['/profile/:path*', '/wishlist/:path*']
+  matcher: ["/profile/:path*", "/wishlist/:path*", "/api/orders/:path*"],
 };
