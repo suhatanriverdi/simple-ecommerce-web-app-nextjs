@@ -53,11 +53,13 @@ export default function ProductCard({ product }) {
           <button
             onClick={handleAddToCart}
             disabled={isAdding}
-            className={`py-2 px-4 rounded-lg font-medium transition-all duration-200 flex-1 bg-primary-500 hover:bg-primary-600 text-white transition-colors disabled:bg-gray-300 dark:disabled:bg-gray-600 ${
-              isAdding
-                ? "bg-green-100 dark:bg-green-900 text-green-700 dark:text-green-300"
-                : "bg-primary-100 dark:bg-primary-900 text-primary-700 dark:text-primary-300 hover:bg-primary-200 dark:hover:bg-primary-800"
-            }`}
+            className={`py-2 px-4 rounded-lg font-medium transition-all duration-200 flex-1 disabled:bg-gray-300 dark:disabled:bg-gray-600
+    ${
+      isAdding
+        ? "bg-green-100 text-green-700 dark:bg-green-900 dark:text-green-300"
+        : "bg-primary-100 text-primary-700 hover:bg-primary-200 dark:bg-primary-900 dark:text-primary-300 dark:hover:bg-primary-800"
+    }
+  `}
           >
             {isAdding ? "Added!" : "Add to Cart"}
           </button>

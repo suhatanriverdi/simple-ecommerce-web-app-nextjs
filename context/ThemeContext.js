@@ -10,8 +10,11 @@ export function ThemeProvider({ children }) {
   useEffect(() => {
     // Check local storage or system preference
     const savedTheme = localStorage.getItem("theme");
-    const systemTheme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
-    
+    const systemTheme = window.matchMedia("(prefers-color-scheme: dark)")
+      .matches
+      ? "dark"
+      : "light";
+
     setTheme(savedTheme || systemTheme);
   }, []);
 
