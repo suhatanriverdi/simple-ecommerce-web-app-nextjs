@@ -2,6 +2,19 @@
 
 A full-featured e-commerce web application built with Next.js 15, React, and Tailwind CSS. This project demonstrates modern web development practices, including server and client components, authentication, state management, and responsive design.
 
+<img width="1651" height="1160" alt="image" src="https://github.com/user-attachments/assets/9f693a13-b8e8-42f8-aa73-9a0bc4defe73" />
+
+<img width="1646" height="1160" alt="image" src="https://github.com/user-attachments/assets/ba62e309-52b7-4e1d-8024-fc02ca1b7425" />
+
+<img width="1650" height="1160" alt="image" src="https://github.com/user-attachments/assets/40a705fd-9ae0-4c3f-b4ca-dab7ba0abc50" />
+
+<img width="1650" height="1159" alt="image" src="https://github.com/user-attachments/assets/4dd6d328-3b10-432b-b203-5cafddc865ec" />
+
+<img width="1649" height="1161" alt="image" src="https://github.com/user-attachments/assets/5a5e4f06-09ac-491b-b780-1c0d0c1cd881" />
+
+<img width="1647" height="1157" alt="image" src="https://github.com/user-attachments/assets/083cc9f6-3540-460b-a44f-a5ce40c6c695" />
+
+
 ## Features
 
 - 🛍️ Product browsing with search and filtering
