@@ -2,6 +2,9 @@
 
 A full-featured e-commerce web application built with Next.js 15, React, and Tailwind CSS. This project demonstrates modern web development practices, including server and client components, authentication, state management, and responsive design.
 
+## ⚡ [Live Preview Link](https://simple-ecommerce-web-app-nextjs.vercel.app/) ⚡
+
+
 <img width="1651" height="1160" alt="image" src="https://github.com/user-attachments/assets/9f693a13-b8e8-42f8-aa73-9a0bc4defe73" />
 
 <img width="1646" height="1160" alt="image" src="https://github.com/user-attachments/assets/ba62e309-52b7-4e1d-8024-fc02ca1b7425" />
