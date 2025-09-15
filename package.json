@@ -6,6 +6,7 @@
     "dev": "concurrently \"json-server --watch data/db.json --port 3001\" \"next dev\"",
     "build": "next build",
     "start": "next start",
+    "vercel-server": "node api/server.js",
     "lint": "eslint"
   },
   "dependencies": {
